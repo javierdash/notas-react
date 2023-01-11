@@ -49,8 +49,38 @@ var controller = {
         })
       }
 
+      return res.status(200).send({
+        status: "success",
+        articles
+      })
     })
+  },
 
+  //metodo para eliminar un articulo
+  delete: (req, res) => {
+    //recogemos el id a traves de la url
+    var articleId = req.params.articleId
+
+    Article.findOneAndDelete({_id: articleId}, (err, articleRemoved) => {
+      if(err){
+        return res.status(500).send({
+          status: "error",
+          message: "error al eliminar el articulo"
+        })
+      }
+      if(!articleRemoved){
+        return res.status(404).send({
+          status: "error",
+          message: "no se ha encontrado el articulo a eliminar"
+        })
+      }
+
+      return res.status(200).send({
+        status: "success",
+        article: articleRemoved
+      })
+
+    })
   }
 
 }

@@ -1,0 +1,28 @@
+{
+  "name": "notasreact",
+  "version": "1.0.0",
+  "description": "API REST con react",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./backend-notas/src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/javierdash/notas-react.git"
+  },
+  "author": "javier dash",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/javierdash/notas-react/issues"
+  },
+  "homepage": "https://github.com/javierdash/notas-react#readme",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "express": "^4.18.2",
+    "mongoose": "^6.8.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
